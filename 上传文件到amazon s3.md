@@ -10,7 +10,9 @@
 
 [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)
 
-[[Downloading folders from aws s3, cp or sync?](https://stackoverflow.com/questions/27932345/downloading-folders-from-aws-s3-cp-or-sync)](https://stackoverflow.com/questions/27932345/downloading-folders-from-aws-s3-cp-or-sync/27935645)
+[Downloading folders from aws s3, cp or sync?](https://stackoverflow.com/questions/27932345/downloading-folders-from-aws-s3-cp-or-sync/27935645)
+
+[Invalidating Files](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#invalidating-objects-api)
 
 ## 1、安装python 2.7 、 pip和aws工具
 
@@ -131,6 +133,8 @@ aws s3 sync . s3://xxx
 aws s3 cp xx s3://xx
 # 同步文件到子目录，最后一定要加上"/"
 aws s3 cp xx s3://xx/xx/
+# 刷新CDN distribution-id可以在后台查看
+aws cloudfront create-invalidation --distribution-id=xxxx --paths "/*"
 ```
 
 其它命令使用方法见参考链接。
