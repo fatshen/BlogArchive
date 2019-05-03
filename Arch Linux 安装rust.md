@@ -1,6 +1,6 @@
 # Arch Linux 安装rust
 
-## 0. 参与
+## 0. 参考
 
 [Rust Toolchain 反向代理使用帮助](https://mirrors.ustc.edu.cn/help/rust-static.html)
 
